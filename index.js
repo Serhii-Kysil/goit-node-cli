@@ -1,4 +1,5 @@
 import { program } from "commander";
+import "colors";
 import * as contacts from "./data/contacts.js";
 
 program
@@ -30,7 +31,7 @@ async function invokeAction({ action, id, name, email, phone }) {
       return console.log(removeContact);
 
     default:
-      console.warn("\x1B[31m Unknown action type!");
+      console.log("Unknown action type!".red);
   }
 }
 
